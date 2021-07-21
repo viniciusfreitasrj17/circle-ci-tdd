@@ -14,8 +14,8 @@ import { IProduct } from '../model/Product';
 const sellProduct = (product: IProduct, amount: number): IProduct => {
   if (!product.stock)
     throw new Error('Exception: Not found stock')
-
-  product.stock -= amount;
+    
+  product.stock -= 1;
   return product;
 };
 
