@@ -15,7 +15,7 @@ const sellProduct = (product: IProduct, amount: number): IProduct => {
   if (!product.stock)
     throw new Error('Exception: Not found stock')
     
-  product.stock -= 1;
+  product.stock -= amount;
   return product;
 };
 
